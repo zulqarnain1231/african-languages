@@ -32,7 +32,7 @@ const Home = () => {
           </div>
         </div>
         {/* right section */}
-        <div className="h-100 d-flex flex-column flex-grow-1 justify-content-center align-items-center gap-4 bg-white p-5 login-right-section">
+        <div className="h-100 d-flex flex-column flex-grow-1 justify-content-center align-items-center gap-2 bg-white p-5 login-right-section">
           <h1 className="text-center">
             Apprendre facilement une langue africaine
           </h1>
@@ -54,7 +54,39 @@ const Home = () => {
         </div>
       </div>
 
-      {/* for */}
+      {/* for small  screens*/}
+      <div className="w-100 h-100 px-4 d-md-none d-flex flex-column align-items-center justify-content-center gap-2">
+        <div className="bg-white rounded-circle p-4 home-shadow logo-img-mobile">
+          <div className="position-relative logo-img">
+            <Image
+              src={"/Assets/logo.png"}
+              className="w-100 h-100 object-fit-fill "
+              fill
+              alt=""
+            />
+          </div>
+        </div>
+        <div className="h-100 d-flex flex-column flex-grow-1 justify-content-center align-items-center gap-2 px-4 right-section-mobile">
+          <h1 className="text-center">
+            Apprendre facilement une langue africaine
+          </h1>
+          <div className="">
+            <p className="text-center">
+              Grâce à des contenus réalistes, ludiques et complets
+            </p>
+          </div>
+
+          <button className="mainGradient border-0 py-2 rounded-3 text-white language-btn">
+            Choisir une langue
+          </button>
+          <div className="w-100 d-flex flex-column align-items-center justify-content-center gap-1">
+            <p className="text-center">Déjà membre ?</p>
+            <Link href={"/login"} className="login-btn">
+              Connectez-vous
+            </Link>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
