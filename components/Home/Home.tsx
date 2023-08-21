@@ -42,9 +42,12 @@ const Home = () => {
             </p>
           </div>
 
-          <button className="mainGradient border-0 py-2 rounded-3 text-white language-btn">
+          <Link
+            href={"/languages"}
+            className="mainGradient border-0 py-2 rounded-3 text-white language-btn text-decoration-none "
+          >
             Choisir une langue
-          </button>
+          </Link>
           <div className="w-100 d-flex flex-column align-items-center justify-content-center gap-1">
             <p className="text-center">Déjà membre ?</p>
             <Link href={"/login"} className="login-btn">
@@ -76,9 +79,12 @@ const Home = () => {
             </p>
           </div>
 
-          <button className="mainGradient border-0 py-2 rounded-3 text-white language-btn">
+          <Link
+            href={"/languages"}
+            className="mainGradient border-0 py-2 rounded-3 text-white language-btn text-decoration-none "
+          >
             Choisir une langue
-          </button>
+          </Link>
           <div className="w-100 d-flex flex-column align-items-center justify-content-center gap-1">
             <p className="text-center">Déjà membre ?</p>
             <Link href={"/login"} className="login-btn">
