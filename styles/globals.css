@@ -8,8 +8,14 @@
 }
 .login-grid-container {
   display: grid;
+  width: 75%;
   grid-template-columns: 3fr 2fr;
+  background-color: white;
+  -webkit-box-shadow: 3px 20px 35px -7px rgba(252, 22, 52, 0.2);
+  -moz-box-shadow: 3px 20px 35px -7px rgba(252, 22, 52, 0.2);
+  box-shadow: 3px 20px 35px -7px rgba(252, 22, 52, 0.22);
 }
+
 .logo-img {
   height: 100px;
   width: 100px;
@@ -149,10 +155,25 @@
   .language-btn {
     width: 100%;
   }
+  .input {
+    width: 100%;
+  }
+  .login-grid-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    box-shadow: none;
+  }
+  .login-left-section {
+    width: 80%;
+    margin: auto;
+    border: none;
+  }
 }
 
 @media (max-width: 768px) {
   .language-btn {
-    width: 300px;
+    width: 100%;
   }
 }
