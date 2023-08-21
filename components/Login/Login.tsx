@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import TextInput from "../Shared/Inputs/TextInput";
-import Modal from "react-bootstrap/Modal";
 import { HiOutlineMail } from "react-icons/hi";
 import { HiMiniLockClosed } from "react-icons/hi2";
+import ErrorModal from "../Shared/Modals/ErrorModal";
 
 const Login = () => {
   const [showModal, setShowModal] = useState<boolean>(false);
@@ -102,16 +102,7 @@ const Login = () => {
           </div>
         </div>
       </div>
-      <Modal show={showModal} onHide={toggleModal}>
-        <h5>Erreur</h5>
-        <Modal.Body>Tous les champs doivent etre remples</Modal.Body>
-
-        <div className="w-100 d-flex justify-content-end  align-items-center ">
-          <button onClick={toggleModal} className="drawer-close-btn">
-            Continuer
-          </button>
-        </div>
-      </Modal>
+      <ErrorModal open={showModal} setOpen={toggleModal} />
     </div>
   );
 };
