@@ -38,7 +38,7 @@ const Login = () => {
       className="w-100 h-100 d-flex flex-column justify-content-center  align-items-center rounded-4 "
       style={{ minHeight: "100vh", background: "#F6F6F6" }}
     >
-      <div className="d-lg-grid h-auto mx-auto rounded-4 login-grid-container">
+      <div className="d-lg-grid h-auto mx-auto rounded-4 login-grid-container slide-in">
         {/* left section */}
         <form
           onSubmit={handleSubmit}
