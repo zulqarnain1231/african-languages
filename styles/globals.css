@@ -24,6 +24,25 @@
   -moz-box-shadow: 3px 20px 35px -7px rgba(252, 22, 52, 0.2);
   box-shadow: 3px 20px 35px -7px rgba(252, 22, 52, 0.22);
 }
+.forgetpassword-grid-container {
+  display: flex;
+  width: 40%;
+  background-color: white;
+  -webkit-box-shadow: 3px 20px 35px -7px rgba(252, 22, 52, 0.2);
+  -moz-box-shadow: 3px 20px 35px -7px rgba(252, 22, 52, 0.2);
+  box-shadow: 3px 20px 35px -7px rgba(252, 22, 52, 0.22);
+}
+.forget-password-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background-color: #f6f6f6;
+  border: 2px solid #fc1634;
+  border-radius: 10px;
+}
 
 .logo-img {
   height: 100px;
@@ -142,16 +161,27 @@
   align-items: center;
   justify-content: center;
   position: relative;
+  width: 400px;
+  height: 50px;
+  font-weight: 700;
+  font-size: 16px;
+}
+.register-input{
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
   width: 100%;
   height: 50px;
   font-weight: 700;
   font-size: 16px;
 }
-.input input {
+
+.input input,.register-input input {
   outline: none;
   border: 0;
 }
-.input input:focus {
+.input input:focus, .register-input input:focus {
   outline: none;
   border: none;
 }
@@ -216,6 +246,18 @@
     flex-direction: column;
     background-color: transparent;
     box-shadow: none;
+  }
+  .forgetpassword-grid-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    box-shadow: none;
+  }
+  .forget-password-form {
+    width: 90%;
+    margin: auto;
+    border: none;
   }
   .register-grid-container {
     width: 100%;

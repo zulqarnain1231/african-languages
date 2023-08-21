@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import TextInput from "../Shared/Inputs/TextInput";
+
 import { HiOutlineMail, HiOutlineCheckCircle } from "react-icons/hi";
 import { HiMiniLockClosed } from "react-icons/hi2";
 import { AiOutlineUser } from "react-icons/ai";
@@ -74,6 +75,7 @@ const Register = () => {
               value={inputs.name}
               setValue={handleInputs}
               type="text"
+              style="register-input"
               placeholder="Nom & Prénom *"
               icon={<AiOutlineUser className="input-icon" />}
               required={false}
@@ -83,6 +85,7 @@ const Register = () => {
               value={inputs.email}
               setValue={handleInputs}
               type="email"
+              style="register-input"
               placeholder="Email *"
               icon={<HiOutlineMail className="input-icon" />}
               required={false}
@@ -92,6 +95,7 @@ const Register = () => {
               value={inputs.address}
               setValue={handleInputs}
               type="text"
+              style="register-input"
               placeholder="Addresse "
               icon={<MdOutlineLocationOn className="input-icon" />}
               required={false}
@@ -101,6 +105,7 @@ const Register = () => {
               value={inputs.telephone}
               setValue={handleInputs}
               type="tel"
+              style="register-input"
               placeholder="Téléphone "
               icon={<BiPhoneCall className="input-icon" />}
               required={false}
@@ -111,6 +116,7 @@ const Register = () => {
                 value={inputs.password}
                 setValue={handleInputs}
                 type="password"
+                style="register-input"
                 placeholder="Mot de passe *"
                 icon={<BiLockAlt className="input-icon" />}
                 required={false}
@@ -120,6 +126,7 @@ const Register = () => {
                 value={inputs.confirmPassword}
                 setValue={handleInputs}
                 type="password"
+                style="register-input"
                 placeholder="Confirmation *"
                 icon={<HiOutlineCheckCircle className="input-icon" />}
                 required={false}

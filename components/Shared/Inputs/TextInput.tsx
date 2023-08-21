@@ -8,6 +8,7 @@ interface Props {
   placeholder: string;
   name: string;
   required?: boolean;
+  style?: string;
 }
 const TextInput: React.FC<Props> = ({
   type = "text",
@@ -17,9 +18,10 @@ const TextInput: React.FC<Props> = ({
   placeholder,
   name,
   required = true,
+  style = "input",
 }) => {
   return (
-    <div className="rounded-3 bg-white input px-4">
+    <div className={`rounded-3 bg-white px-4 ${style}`}>
       {icon}
       <input
         type={type}
