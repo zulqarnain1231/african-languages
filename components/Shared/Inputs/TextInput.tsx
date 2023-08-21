@@ -26,6 +26,7 @@ const TextInput: React.FC<Props> = ({
       <input
         type={type}
         value={value}
+        autoComplete="off"
         name={name}
         onChange={setValue}
         className="w-100 h-100 bg-transparent border-none px-3"
