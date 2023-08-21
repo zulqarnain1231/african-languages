@@ -1,28 +1,43 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import TextInput from "../Shared/Inputs/TextInput";
+import Modal from "react-bootstrap/Modal";
 import { HiOutlineMail } from "react-icons/hi";
 import { HiMiniLockClosed } from "react-icons/hi2";
-import { CiLock } from "react-icons/ci";
+
 const Login = () => {
+  const [showModal, setShowModal] = useState<boolean>(false);
+  const [isFormFilled, setIsFormFilled] = useState<boolean>(false);
   const [inputs, setInputs] = useState({
     email: "",
     password: "",
   });
+  const toggleModal = () => {
+    setShowModal((prevalue) => !prevalue);
+  };
   const handleInputs = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setInputs({ ...inputs, [name]: value });
   };
+  const { email, password } = inputs;
+  useEffect(() => {
+    if (email !== "" && password !== "") {
+      setIsFormFilled(true);
+    } else setIsFormFilled(false);
+  }, [email, password]);
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    console.log(isFormFilled);
+    if (!isFormFilled) {
+      setShowModal(true);
+    }
   };
   return (
     <div
       className="w-100 h-100 d-flex flex-column justify-content-center  align-items-center rounded-4 "
       style={{ minHeight: "100vh", background: "#F6F6F6" }}
     >
-      {/* for screens bigger then 768px */}
       <div className="d-lg-grid h-auto mx-auto rounded-4 login-grid-container">
         {/* left section */}
         <form
@@ -47,6 +62,7 @@ const Login = () => {
               type="email"
               placeholder="Email"
               icon={<HiOutlineMail className="input-icon" />}
+              required={false}
             />
             <TextInput
               name="password"
@@ -55,6 +71,7 @@ const Login = () => {
               type="password"
               placeholder="Mot de passe"
               icon={<HiMiniLockClosed className="input-icon" />}
+              required={false}
             />
           </div>
           <button
@@ -85,6 +102,16 @@ const Login = () => {
           </div>
         </div>
       </div>
+      <Modal show={showModal} onHide={toggleModal}>
+        <h5>Erreur</h5>
+        <Modal.Body>Tous les champs doivent etre remples</Modal.Body>
+
+        <div className="w-100 d-flex justify-content-end  align-items-center ">
+          <button onClick={toggleModal} className="drawer-close-btn">
+            Continuer
+          </button>
+        </div>
+      </Modal>
     </div>
   );
 };
