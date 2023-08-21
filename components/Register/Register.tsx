@@ -150,8 +150,8 @@ const Register = () => {
 
         {/* right section */}
         <div className=" h-100 d-lg-flex d-none flex-column align-items-center justify-content-center gap-4 p-5 mainGradient login-right-section">
-          <div className="bg-white rounded-circle p-4">
-            <div className="position-relative login-logo-img">
+          <div className="bg-white rounded-circle p-4 white-shadow">
+            <div className="position-relative login-logo-img rounded-circle ">
               <Image
                 src={"/Assets/logo.png"}
                 className="w-100 h-100 object-fit-fill "

@@ -23,7 +23,7 @@ const LanguageCard: React.FC<Props> = ({ logo, members }: Props) => {
           alt=""
         />
       </div>
-      <p>{members}</p>
+      <p>{members} members</p>
     </Link>
   );
 };

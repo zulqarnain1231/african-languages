@@ -1,0 +1,58 @@
+{
+  "languages": [
+    {
+      "logo": "/Assets/Languages/bambara.png",
+      "members": 3044
+    },
+    {
+      "logo": "/Assets/Languages/bassa.png",
+      "members": 245
+    },
+    {
+      "logo": "/Assets/Languages/douala.png",
+      "members": 780
+    },
+    {
+      "logo": "/Assets/Languages/fongbe.png",
+      "members": 586
+    },
+    {
+      "logo": "/Assets/Languages/lingla.png",
+      "members": 1408
+    },
+    {
+      "logo": "/Assets/Languages/mina.png",
+      "members": 523
+    },
+    {
+      "logo": "/Assets/Languages/pulaar.png",
+      "members": 1135
+    },
+
+    {
+      "logo": "/Assets/Languages/sango.png",
+      "members": 300
+    },
+
+    {
+      "logo": "/Assets/Languages/serere.png",
+      "members": 271
+    },
+    {
+      "logo": "/Assets/Languages/soninke.png",
+      "members": 1817
+    },
+    {
+      "logo": "/Assets/Languages/swahili.png",
+      "members": 501
+    },
+    {
+      "logo": "/Assets/Languages/wolof.png",
+      "members": 1637
+    },
+    {
+      "logo": "/Assets/Languages/yoruba.png",
+      "members": 247
+    }
+  ]
+}
